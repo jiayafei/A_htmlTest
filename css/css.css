@@ -1,0 +1,3007 @@
+/*这里是通用css作用于全部*/
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+
+p {
+	margin-bottom: 0px;
+}
+
+/*bootstrap中取消a标签点击出现下划线的效果*/
+/*最后加的调整按钮点击的时候取消按钮周边的颜色*/
+input:focus {
+	outline: none;
+}
+
+button:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	/*去除下换线*/
+}
+
+a:focus {
+	text-decoration: none;
+}
+
+/*bootstrap中取消a标签点击出现下划线的效果*/
+/*最后加的调整按钮点击的时候取消按钮周边的颜色*/
+a:link {
+	text-decoration: none;
+	/* 指正常的未被访问过的链接*/
+}
+
+a:visited {
+	text-decoration: none;
+	/*指已经访问过的链接*/
+}
+
+a:hover {
+	text-decoration: none;
+	/*指鼠标在链接*/
+}
+
+a:active {
+	text-decoration: none;
+	/* 指正在点的链接*/
+}
+
+li {
+	list-style: none;
+	/*去除原点*/
+}
+
+ul {
+	margin-bottom: 0px;
+}
+
+.clear {
+	zoom: 1;
+}
+
+/*为了兼容性，因为ie6/7不能使用伪类，所以加上此行代码。*/
+
+.clear:after {
+	clear: both;
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	visibility: hidden;
+	overflow: hidden;
+}
+
+/* 全部的平均分配样式 */
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex .flexitem {
+	flex: 1;
+	text-align: center;
+}
+
+/* 整体的 宽度设置 */
+.big {
+	width: 1200px;
+	margin: 0px auto;
+}
+
+/* 顶部 开始 */
+.top {
+	height: 50px;
+	line-height: 50px;
+	box-sizing: border-box;
+	display: flex;
+	/* flex-wrap: wrap; */
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.top .topleft {
+	order: -1;
+	flex: 0 1 350px;
+}
+
+.top .topleft img {
+	width: 100%;
+	vertical-align: middle;
+}
+
+.top .topcenter {
+	flex-grow: 1;
+}
+
+.top .topcenter ul {
+	margin-left: 50px;
+}
+
+.top .topcenter ul li {
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 30px;
+}
+
+.top .topcenter ul li a {
+	font-size: 18px;
+	color: #595758;
+}
+
+.top .topcenter ul li img {
+	width: 18px;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.top .topright {
+	flex: 0 1 300px;
+}
+
+.top .topright ul li {
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+.top .topright ul li a {
+	font-size: 18px;
+	color: #595758;
+}
+
+.top .topright ul li img {
+	margin-right: 5px;
+	width: 25px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+}
+
+.top .topright ul li:last-child a {
+	font-size: 22px;
+	color: #FED518;
+	font-weight: 700;
+}
+
+/* 登录页面的调整  开始*/
+.loginTop .topcenter ul {
+	margin-left: 0px;
+}
+
+.loginTop .topcenter ul li {}
+
+.loginTop .topcenter ul li::before {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 40px;
+	background-color: #D6D7D7;
+	margin-right: 30px;
+	position: relative;
+	top: 5px;
+}
+
+.loginTop .topcenter ul li a {
+	letter-spacing: 2px;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	display: inline-block;
+	position: relative;
+	top: -5px;
+	color: #595757;
+	font-weight: 600;
+}
+
+/* 登录页面的调整  结束*/
+/* 顶部 结束 */
+/* 轮播图 开始 */
+.banner {
+	overflow: hidden;
+	position: relative;
+}
+
+.banner .hd {
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	z-index: 1;
+}
+
+.banner .hd ul {
+	overflow: hidden;
+	zoom: 1;
+	float: left;
+}
+
+.banner .hd ul li {
+	float: left;
+	margin-right: 2px;
+	width: 15px;
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	background: #fff;
+	cursor: pointer;
+}
+
+.banner .hd ul li.on {
+	background: #FFD617;
+	color: #fff;
+}
+
+.banner .bd {
+	position: relative;
+	height: 100%;
+	z-index: 0;
+}
+
+.banner .bd li {
+	zoom: 1;
+	vertical-align: middle;
+	position: relative;
+	height: 550px;
+	width: 100%;
+}
+
+.banner .bd ul li>img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: none;
+}
+
+/* 轮播图上面的 内容 开始 */
+.banner .bd ul li .banner-flex {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	z-index: 10;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.banner .bd ul li .banner-flex .banner-item {
+	vertical-align: middle;
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.banner .bd ul li .banner-flex .left {
+	width: 600px;
+	position: relative;
+}
+
+.banner .bd ul li .banner-flex .left>img {
+	width: 100%;
+	position: relative;
+	top: -30px;
+}
+
+.banner .bd ul li .banner-flex .left p {
+	width: 100%;
+	color: #B9741A;
+	font-size: 16px;
+}
+
+/* 只有第三个里面有 开始 */
+.banner .bd ul li .banner-flex .left p img {
+	position: absolute;
+	right: -20px;
+	bottom: -24px;
+	width: 120px;
+}
+
+/* 只有第三个里面有 结束 */
+.banner .bd ul li .banner-flex .center {
+	width: 300px;
+}
+
+.banner .bd ul li .banner-flex .center img {
+	width: 100%;
+}
+
+.banner .bd ul li .banner-flex .right {
+	width: 300px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from {
+	background-color: #fff;
+	margin: 10px;
+	border-radius: 10px;
+	padding: 60px 20px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(1) {
+	color: #595757;
+	font-size: 16px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(2) {
+	color: #595757;
+	font-size: 16px;
+	margin: 10px auto;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(2) span {
+	color: #FCCF00;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(3) {
+	width: 80%;
+	background-color: #FCCF00;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	border-radius: 15px;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(3) a {
+	color: #fff;
+	font-size: 14px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(4) {
+	width: 80%;
+	border-top: 1px solid #F1F1F1;
+	margin: 10px auto;
+	padding-top: 10px;
+	display: block;
+	text-align: center;
+	color: #595757;
+	font-size: 14px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from p:nth-child(4) span {
+	color: #7D5225;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from .banner1-p5 {
+	color: #595757;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from .banner1-p5 i {
+	color: #595757;
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.banner .bd ul li .banner-flex .right .banner-from .banner1-p5 img {
+	width: 30px;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 6px;
+}
+
+/* 轮播图上面的 内容 结束 */
+/* 下面是前/后按钮代码 */
+.banner .prev,
+.banner .next {
+	position: absolute;
+	left: 3%;
+	top: 50%;
+	margin-top: -25px;
+	display: block;
+	color: #fff;
+	filter: alpha(opacity=50);
+	/* opacity: 0.5; */
+	font-size: 50px;
+}
+
+.banner .next {
+	left: auto;
+	right: 3%;
+	background-position: 8px 5px;
+}
+
+.banner .prev:hover,
+.banner .next:hover {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+.banner .prevStop {
+	display: none;
+}
+
+.banner .nextStop {
+	display: none;
+}
+
+/* 轮播图 结束 */
+/* 六大能力 开始 */
+.SixAbilitiesbg {
+	padding: 20px 0px 30px;
+	background-color: #F7F7F7;
+}
+
+.SixAbilities {
+	margin: 40px auto;
+}
+
+/* 头部 */
+.SixAbilities .SixAbilities-top {
+	border-bottom: 1px solid #898989;
+	padding-bottom: 20px;
+}
+
+/* 课程体系调整 */
+.SixAbilitiesbg .SixAbilities .SixAbilities-top {
+	border-bottom: none;
+	padding-bottom: 0px;
+}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 4px;
+}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-main p {}
+
+.SixAbilities .SixAbilities-top .SixAbilities-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	/* background-color: #FACBCC; */
+	color: #9FA0A0;
+}
+
+/* 主要内容 */
+.SixAbilities .SixAbilities-main {
+	margin: 30px auto;
+}
+
+.SixAbilities .SixAbilities-main ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.SixAbilities .SixAbilities-main ul li {
+	flex: 1;
+	text-align: center;
+	padding: 0px 10px;
+}
+
+.SixAbilities .SixAbilities-main ul li img {
+	width: 60%;
+}
+
+.SixAbilities .SixAbilities-main ul li h3 {
+	margin: 10px auto;
+	color: #7A7979;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+.SixAbilities .SixAbilities-main ul li p {
+	letter-spacing: 1px;
+	color: #A5A6A6;
+	font-size: 14px;
+	text-align: left;
+}
+
+/* 六大能力 结束 */
+/* 为什么选择一对一 开始 */
+.whyonebg {
+	padding: 60px 0px;
+	display: block;
+	background-color: #FFF5E8;
+}
+
+.whyone {
+	margin: 0 auto;
+}
+
+/* 头部 */
+.whyone .whyone-top {
+	padding-bottom: 20px;
+}
+
+.whyone .whyone-top .whyone-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.whyone .whyone-top .whyone-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.whyone .whyone-top .whyone-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 4px;
+}
+
+.whyone .whyone-top .whyone-top-main {
+	text-align: center;
+	margin: 20px auto 0px;
+}
+
+.whyone .whyone-top .whyone-top-main p {}
+
+.whyone .whyone-top .whyone-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 主要内容 */
+.whyone .whyone-main {}
+
+.whyone .whyone-main ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px 10px;
+}
+
+.whyone .whyone-main ul li {
+	text-align: center;
+	flex: 0 0 33.33%;
+	margin-top: 35px;
+	position: relative;
+}
+
+.whyone .whyone-main ul li .whyitem {
+	margin: 0px 10px;
+	background-color: #fff;
+	border-radius: 20px;
+}
+
+.whyone .whyone-main ul li>img {
+	width: 300px;
+	height: 276px;
+	position: absolute;
+	left: calc(50% - 150px);
+	top: -45px;
+}
+
+.whyone .whyone-main ul li .whyitem .whyitem-title {
+	background-color: #FFD617;
+	height: 30px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	position: relative;
+}
+
+.whyone .whyone-main ul li .whyitem .whyitem-title img {
+	width: 100px;
+	height: 100px;
+	z-index: 5;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+}
+
+.whyone .whyone-main ul li .whyitem .whyitem-title span {
+	color: #FFFFFF;
+	font-size: 42px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	z-index: 7;
+	position: absolute;
+	left: calc(50% - 50px);
+	top: calc(50% - 50px);
+}
+
+.whyone .whyone-main ul li .whyitem h3 {
+	margin: 60px 30px 10px 30px;
+	color: #727171;
+	font-weight: normal;
+	font-size: 20px;
+	border-bottom: 2px solid #FFF1B2;
+	padding-bottom: 10px;
+}
+
+.whyone .whyone-main ul li .whyitem p {
+	text-align: center;
+	letter-spacing: 5px;
+	color: #9FA0A0;
+	font-size: 14px;
+	padding-bottom: 10px;
+	margin: 10px 70px 10px 70px;
+}
+
+/* 为什么选择一对一 结束 */
+/* 在线教育 一对一 开始 */
+.lineonebg {
+	height: 530px;
+	width: 100%;
+	background: url(../images/lineonebg.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.lineone {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	height: 100%;
+}
+
+.lineone p {
+	text-align: center;
+	width: 500px;
+	position: absolute;
+	left: calc(50% - 250px);
+}
+
+.lineone p:nth-child(1) {
+	font-size: 35px;
+	top: 30px;
+}
+
+.lineone p:nth-child(2) {
+	font-size: 20px;
+	top: 100px;
+}
+
+.lineone p:nth-child(3) {
+	font-size: 16px;
+	bottom: 30px;
+}
+
+.lineone img {
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	left: calc(50% - 65px);
+	top: calc(50% - 65px);
+}
+
+/* 在线教育 一对一 结束 */
+/* 专属定制化课程体系 开始 */
+.exclusive {
+	margin: 80px auto;
+	display: block;
+	vertical-align: middle;
+}
+
+/* 标题 开始 */
+.exclusive .exclusive-top .exclusive-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.exclusive .exclusive-top .exclusive-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.exclusive .exclusive-top .exclusive-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 3px;
+}
+
+.exclusive .exclusive-top .exclusive-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.exclusive .exclusive-top .exclusive-top-main p {
+	margin: 10px auto;
+}
+
+.exclusive .exclusive-top .exclusive-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+/* 主要内容 开始 */
+.exclusive .exclusive-main {
+	margin: 200px auto 30px;
+	position: relative;
+}
+
+.exclusive .exclusive-main>div {
+	margin-top: 10px;
+}
+
+/* 第一层 年龄 开始 */
+.exclusive .exclusive-main .EMflex1 {
+	display: flex;
+	text-align: center;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.exclusive .exclusive-main .EMflex1 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex1 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex1 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex1 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex1 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex1 .EMflex-item ul {
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.exclusive .exclusive-main .EMflex1 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex1 ul {
+	position: relative;
+}
+
+.exclusive .exclusive-main .EMflex1 li {
+	border-radius: 10px;
+	padding: 10px 0px;
+	height: 58px;
+	box-sizing: border-box;
+}
+
+.exclusive .exclusive-main .EMflex1 li p {
+	font-size: 14px;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex1 li p:nth-child(2) {
+	font-size: 25px;
+}
+
+.exclusive .exclusive-main .EMflex1 .one ul img {
+	position: absolute;
+	width: 230px;
+	left: 0px;
+	top: -250px;
+}
+
+.exclusive .exclusive-main .EMflex1 .one li {
+	background-color: #EFEFEF;
+	line-height: 38px;
+}
+
+.exclusive .exclusive-main .EMflex1 .one li p {
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex1 .two li {
+	background-color: #FFA462;
+
+}
+
+.exclusive .exclusive-main .EMflex1 .two ul img {
+	position: absolute;
+	width: 100px;
+	right: 100px;
+	top: -100px;
+}
+
+.exclusive .exclusive-main .EMflex1 .two li:nth-child(1) {
+	height: 68px;
+}
+
+.exclusive .exclusive-main .EMflex1 .two li:nth-child(2) {
+	height: 78px;
+}
+
+.exclusive .exclusive-main .EMflex1 .two li:nth-child(3) {
+	height: 88px;
+}
+
+.exclusive .exclusive-main .EMflex1 .two li:nth-child(4) {
+	height: 98px;
+}
+
+.exclusive .exclusive-main .EMflex1 .three li {
+	background-color: #FFBC3A;
+}
+
+.exclusive .exclusive-main .EMflex1 .three ul img {
+	position: absolute;
+	width: 100px;
+	right: 100px;
+	top: -170px;
+}
+
+.exclusive .exclusive-main .EMflex1 .three li:nth-child(1) {
+	height: 108px;
+}
+
+.exclusive .exclusive-main .EMflex1 .three li:nth-child(2) {
+	height: 118px;
+}
+
+.exclusive .exclusive-main .EMflex1 .three li:nth-child(3) {
+	height: 128px;
+}
+
+.exclusive .exclusive-main .EMflex1 .four li {
+	background-color: #8BB8FF;
+}
+
+.exclusive .exclusive-main .EMflex1 .four ul img {
+	position: absolute;
+	width: 100px;
+	right: 100px;
+	top: -110px;
+}
+
+.exclusive .exclusive-main .EMflex1 .four li:nth-child(1) {
+	height: 138px;
+}
+
+.exclusive .exclusive-main .EMflex1 .four li:nth-child(2) {
+	height: 148px;
+}
+
+.exclusive .exclusive-main .EMflex1 .four li:nth-child(3) {
+	height: 158px;
+}
+
+/* 第一层 年龄 结束 */
+/* 第二层 级别 开始 */
+.exclusive .exclusive-main .EMflex2 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex2 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex2 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex2 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex2 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex2 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex2 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex2 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex2 li {
+	border-radius: 10px;
+	padding: 10px 0px;
+	height: 58px;
+	box-sizing: border-box;
+}
+
+.exclusive .exclusive-main .EMflex2 li p {
+	font-size: 14px;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex2 .one li {
+	background-color: #EFEFEF;
+	line-height: 38px;
+}
+
+.exclusive .exclusive-main .EMflex2 .one li p {
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex2 .two li {
+	background-color: #FFA462;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex2 .three li {
+	background-color: #FFBC3A;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex2 .four li {
+	background-color: #8BB8FF;
+	color: #fff;
+}
+
+/* 第二层 级别  结束 */
+/* 第三层 阶梯递进系统 开始 */
+.exclusive .exclusive-main .EMflex3 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex3 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex3 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex3 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex3 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex3 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex3 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex3 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex3 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 0px;
+}
+
+.exclusive .exclusive-main .EMflex3 li a {
+	font-size: 14px;
+	color: #fff;
+	padding: 0px 2px;
+	/* background-color: #FACBCC; */
+}
+
+.exclusive .exclusive-main .EMflex3 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex3 .two li {
+	background-color: #FFA462;
+}
+
+.exclusive .exclusive-main .EMflex3 .three li {
+	background-color: #FFBC3A;
+}
+
+.exclusive .exclusive-main .EMflex3 .four li {
+	background-color: #8BB8FF;
+}
+
+/* 第三层 阶梯递进系统 结束 */
+/* 第四层 学习目标 开始 */
+.exclusive .exclusive-main .EMflex4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: left;
+}
+
+.exclusive .exclusive-main .EMflex4 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex4 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex4 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex4 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex4 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex4 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.exclusive .exclusive-main .EMflex4 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+
+}
+
+.exclusive .exclusive-main .EMflex4 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 3px;
+	height: 500px;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+.exclusive .exclusive-main .EMflex4 li a {
+	font-size: 14px;
+	color: #fff;
+	padding: 0px 2px;
+	/* background-color: #FACBCC; */
+	vertical-align: middle;
+}
+
+.exclusive .exclusive-main .EMflex4 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+	text-align: center;
+	line-height: 480px;
+}
+
+.exclusive .exclusive-main .EMflex4 .two li {
+	background-color: #FFA462;
+	padding-top: 20px;
+}
+
+.exclusive .exclusive-main .EMflex4 .three li {
+	background-color: #FFBC3A;
+	padding: 150px 20px 0px;
+}
+
+.exclusive .exclusive-main .EMflex4 .four li {
+	background-color: #8BB8FF;
+	padding: 150px 20px 0px;
+}
+
+/* 第四层 学习目标 结束 */
+/* 第五层 课程模块 开始 */
+.exclusive .exclusive-main .EMflex5 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex5 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex5 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex5 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex5 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex5 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex5 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex5 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex5 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 3px;
+	height: 96px;
+	box-sizing: border-box;
+}
+
+.exclusive .exclusive-main .EMflex5 li a {
+	letter-spacing: 5px;
+	font-size: 14px;
+	color: #fff;
+	padding: 0px 2px;
+	/* background-color: #FACBCC; */
+}
+
+.exclusive .exclusive-main .EMflex5 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+	line-height: 76px;
+}
+
+.exclusive .exclusive-main .EMflex5 .two li {
+	background-color: #FFA462;
+}
+
+.exclusive .exclusive-main .EMflex5 .three li {
+	background-color: #FFBC3A;
+}
+
+.exclusive .exclusive-main .EMflex5 .three li a {
+	width: 80px;
+	display: inline-block;
+}
+
+.exclusive .exclusive-main .EMflex5 .four li {
+	background-color: #8BB8FF;
+}
+
+.exclusive .exclusive-main .EMflex5 .four li a {
+	width: 80px;
+	display: inline-block;
+}
+
+/* 第五层 课程模块 结束 */
+/* 第六层 美术核心素养 开始 */
+.exclusive .exclusive-main .EMflex6 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex6 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex6 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex6 .two {
+	width: 1000px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex6 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex6 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex6 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 0px;
+}
+
+.exclusive .exclusive-main .EMflex6 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex6 .two li {
+	background-color: #B79DFF;
+	color: #fff;
+}
+
+/* 第六层 美术核心素养 结束 */
+/* 第七层 21世纪人文核心素养 开始 */
+.exclusive .exclusive-main .EMflex7 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex7 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex7 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex7 .two {
+	width: 1000px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex7 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex7 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex7 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 0px;
+}
+
+.exclusive .exclusive-main .EMflex7 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex7 .two li {
+	background-color: #B79DFF;
+	color: #fff;
+}
+
+/* 第七层 21世纪人文核心素养 结束 */
+/* 第八层 美国K-12艺术体系 开始 */
+.exclusive .exclusive-main .EMflex8 {
+	display: flex;
+	text-align: center;
+}
+
+.exclusive .exclusive-main .EMflex8 .EMflex-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/*可以理解为：此处设置flex-grow,flex-shrink是告诉flex，既不要给我自动放大，也不要给我自动缩小，我就想设置自己的宽度*/
+}
+
+.exclusive .exclusive-main .EMflex8 .one {
+	width: 200px;
+}
+
+.exclusive .exclusive-main .EMflex8 .two {
+	width: 400px;
+}
+
+.exclusive .exclusive-main .EMflex8 .three {
+	width: 300px;
+}
+
+.exclusive .exclusive-main .EMflex8 .four {
+	width: 300px;
+}
+
+/*每一列里面再次分一下 */
+.exclusive .exclusive-main .EMflex8 .EMflex-item ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.exclusive .exclusive-main .EMflex8 .EMflex-item ul li {
+	flex: 1;
+	margin: 0px 5px;
+}
+
+.exclusive .exclusive-main .EMflex8 .two ul li:first-child {
+	flex: 3;
+}
+
+.exclusive .exclusive-main .EMflex8 li {
+	font-size: 14px;
+	border-radius: 10px;
+	padding: 10px 0px;
+}
+
+.exclusive .exclusive-main .EMflex8 .one li {
+	background-color: #EFEFEF;
+	color: #898989;
+}
+
+.exclusive .exclusive-main .EMflex8 .two li {
+	background-color: #FFA462;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex8 .three li {
+	background-color: #FFBC3A;
+	color: #fff;
+}
+
+.exclusive .exclusive-main .EMflex8 .four li {
+	background-color: #8BB8FF;
+	color: #fff;
+}
+
+/* 第八层 美国K-12艺术体系 结束 */
+/* 主要内容 结束 */
+/* 专属定制化课程体系 结束 */
+/* 严格的教师筛选标准 开始 */
+.strictbg {
+	background-color: #F7F7F7;
+	padding: 70px 0px;
+}
+
+.strict {
+	margin: 60px auto;
+	display: block;
+	vertical-align: middle;
+}
+
+/* 标题 开始 */
+.strict .strict-top .strict-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.strict .strict-top .strict-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.strict .strict-top .strict-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 3px;
+}
+
+.strict .strict-top .strict-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.strict .strict-top .strict-top-main p {
+	margin: 10px auto;
+}
+
+.strict .strict-top .strict-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+/* 主要内容 */
+.strict .strict-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.strict .strict-main .strict-item {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.strict .strict-main .one {
+	width: 200px;
+	text-align: center;
+}
+
+.strict .strict-main .one img {
+	width: 70%;
+	display: block;
+	margin: 23px auto;
+}
+
+.strict .strict-main .two {
+	width: 300px;
+	height: 260px;
+	background: url(../images/strict.png) no-repeat center;
+	background-size: 80% 80%;
+}
+
+.strict .strict-main .two p {
+	position: relative;
+	text-align: center;
+}
+
+.strict .strict-main .two p span {
+	font-size: 22px;
+	color: #fff;
+	padding: 0px 2px;
+	/* background-color: #FACBCC; */
+}
+
+.strict .strict-main .two p:nth-child(1) {
+	top: 35px;
+}
+
+.strict .strict-main .two p:nth-child(2) {
+	top: 87px;
+}
+
+.strict .strict-main .two p:nth-child(3) {
+	top: 135px;
+}
+
+.strict .strict-main .three {
+	width: 700px;
+}
+
+.strict .strict-main .three ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	width: 100%;
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 20px;
+	border: 2px solid #FEBE5D;
+	padding: 5px 20px;
+	box-sizing: border-box;
+	height: 50px;
+	top: 15px;
+}
+
+.strict .strict-main .three ul+ul {
+	margin: 25px auto;
+}
+
+.strict .strict-main .three ul li {
+	flex-grow: 0;
+	flex-shrink: 0;
+	/* background-color: #FACBCC; */
+	vertical-align: middle;
+	color: #979191;
+	height: 21px;
+	line-height: 21px;
+	box-sizing: border-box;
+	font-size: 18px;
+}
+
+.strict .strict-main .three ul li img {
+	width: 30px;
+	display: inline-block;
+	margin-left: 100px;
+}
+
+.strict .strict-main .three ul li:nth-child(1) {
+	width: 40%;
+}
+
+.strict .strict-main .three ul li:nth-child(2) {
+	width: 40%;
+}
+
+.strict .strict-main .three ul li:nth-child(3) {
+	width: 20%;
+	text-align: center;
+}
+
+/* 严格的教师筛选标准 结束 */
+/* 师资培养体系和评价体系 开始 */
+.train {
+	margin: 60px auto;
+	display: block;
+	vertical-align: middle;
+}
+
+/* 标题 开始 */
+.train .train-top .train-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.train .train-top .train-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.train .train-top .train-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 6px;
+}
+
+.train .train-top .train-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.train .train-top .train-top-main p {
+	margin: 10px auto;
+}
+
+.train .train-top .train-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+/* 主要内容 */
+.train .train-main {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.train .train-main ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px 10px;
+}
+
+.train .train-main ul li {
+	text-align: center;
+	flex: 0 0 33.33%;
+	margin-top: 15px;
+	position: relative;
+}
+
+.train .train-main ul li img:nth-child(1) {
+	width: 60%;
+}
+
+.train .train-main ul li p:nth-child(2) {
+	width: 80%;
+	text-align: center;
+	display: block;
+	margin: 10px auto;
+	height: 40px;
+	line-height: 40px;
+	background: url(../images/train-bg.png) no-repeat center;
+	background-size: 80% 100%;
+	font-size: 20px;
+	color: #fff;
+}
+
+.train .train-main ul li img:nth-child(3) {
+	width: 40px;
+	box-sizing: border-box;
+}
+
+/* 师资培养体系和评价体系 结束 */
+/*教学服务评价体系 开始 */
+.servicebg {
+	background-color: #F7F7F7;
+	padding: 70px 0px;
+}
+
+.service {
+	margin: 60px auto;
+	display: block;
+	vertical-align: middle;
+}
+
+/* 标题 开始 */
+.service .service-top .service-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.service .service-top .service-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.service .service-top .service-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 1px;
+}
+
+.service .service-top .service-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.service .service-top .service-top-main p {
+	margin: 10px auto;
+}
+
+.service .service-top .service-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+.service .service-main {
+	margin: 0 auto;
+}
+
+.service .service-main ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 0px 10px;
+}
+
+.service .service-main ul li {
+	text-align: center;
+	flex: 33.33%;
+	margin-top: 25px;
+	position: relative;
+}
+
+.service .service-main ul li img {
+	width: 80%;
+}
+
+.service .service-main ul li p {
+	width: 70%;
+	text-align: center;
+	display: block;
+	margin: 20px auto;
+	height: 60px;
+	line-height: 60px;
+	background: url(../images/train-bg.png) no-repeat center;
+	background-size: 70% 100%;
+	font-size: 20px;
+	color: #fff;
+	letter-spacing: 3px;
+}
+
+/* 教学服务评价体系 结束 */
+/* 领取和咨询 开始 */
+.collectbg {
+	background-color: #FFD748;
+}
+
+.collect {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+.collect .collectitem {
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+.collect .one {
+	position: relative;
+	width: 200px;
+	height: 100%;
+}
+
+.collect .one img {
+	width: 200px;
+	height: 180px;
+	position: absolute;
+	top: calc(50% - 90px);
+	left: calc(50% - 100px);
+}
+
+.collect .two {
+	width: 200px;
+}
+
+.collect .two p:nth-child(1) {
+	color: #8F6026;
+	font-size: 16px;
+}
+
+.collect .two p:nth-child(2) {
+	color: #7F4F21;
+	font-size: 22px;
+	font-weight: 700;
+}
+
+.collect .three {
+	width: 600px;
+	text-align: center;
+}
+
+.collect .three form {}
+
+.collect .three form>span {
+	font-size: 18px;
+	color: #898989;
+	position: relative;
+	right: -60px;
+}
+
+.collect .three form input {
+	width: 300px;
+	height: 40px;
+	border: none;
+	padding-left: 100px;
+	color: #A2A2A3;
+	font-size: 18px;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-indent: 6em;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.collect .three form p {
+	display: inline-block;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	box-sizing: border-box;
+	margin: 0 0 0 -4px;
+	padding: 0 10px;
+	background-color: #FFEE06;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.collect .three form p a{color: #7F4F21;font-size: 14px;}
+.collect .three form p i {
+	font-style: normal;
+	color: #F26B21;
+	font-size: 14px;
+}
+
+.collect .three form p span {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.collect .four {
+	text-align: center;
+	width: 200px;
+}
+
+.collect .four p {
+	height: 40px;
+	background-color: #7F4F21;
+	width: 80%;
+	padding: 7px 5px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	line-height: 26px;
+}
+
+.collect .four p span {
+	color: #fff;
+	font-size: 16px;
+}
+
+/* 领取和咨询 结束 */
+/* 上课场景及学员作品 开始 */
+.ClassScene {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.ClassScene .ClassScene-top .ClassScene-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.ClassScene .ClassScene-top .ClassScene-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.ClassScene .ClassScene-top .ClassScene-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 3px;
+}
+
+.ClassScene .ClassScene-top .ClassScene-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.ClassScene .ClassScene-top .ClassScene-top-main p {
+	margin: 10px auto;
+}
+
+.ClassScene .ClassScene-top .ClassScene-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+/* 主要内容开始 */
+/* 第一层 开始 */
+.ClassScene .ClassScene-main1 {}
+
+.ClassScene .ClassScene-main1 ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px 10px;
+}
+
+.ClassScene .ClassScene-main1 ul li {
+	text-align: center;
+	flex: 0 0 33.33%;
+	margin-top: 15px;
+	position: relative;
+}
+
+.ClassScene .ClassScene-main1 ul li .ClassSceneMain1-item {
+	margin: 10px;
+}
+
+.ClassScene .ClassScene-main1 ul li img {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	width: 373px;
+	height: 248px;
+}
+
+/* 第一层 结束 */
+/* 第二层 开始 */
+.ClassScene .ClassScene-main2 {}
+
+.ClassScene .ClassScene-main2 ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px 10px;
+}
+
+.ClassScene .ClassScene-main2 ul li {
+	text-align: center;
+	flex: 0 0 33.33%;
+	position: relative;
+}
+
+.ClassScene .ClassScene-main2 ul li .ClassSceneMain2-item {
+	margin: 10px;
+}
+
+.ClassScene .ClassScene-main2 ul li .ClassSceneMain2-bg {
+	background: url(../images/ClassScene-mainbg.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.ClassScene .ClassScene-main2 ul li img {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	width: 373px;
+	height: 248px;
+	box-sizing: border-box;
+	padding: 31px;
+}
+
+.ClassScene .ClassScene-main2 ul li p {
+	margin: 10px auto;
+	display: block;
+	text-align: left;
+	text-indent: 1em;
+	font-size: 16px;
+	color: #fff;
+	width: 80%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px;
+	border-radius: 20px;
+	background-color: #FFD748;
+}
+
+/* 第二层 结束 */
+/* 主要内容结束 */
+/* 上课场景及学员作品 结束 */
+/* 家长好评如潮 开始 */
+.opinionbg {
+	padding: 60px 0;
+	background-color: #F7F7F7;
+}
+
+.opinion {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.opinion .opinion-top .opinion-top-title {
+	background-color: #FFD617;
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.opinion .opinion-top .opinion-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.opinion .opinion-top .opinion-top-title img {
+	width: 60%;
+	position: relative;
+	top: 6px;
+}
+
+/* 标题 结束 */
+
+.opinion-main {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+.opinion-main .hd {}
+
+.opinion-main .hd .prev {
+	position: absolute;
+	right: 0;
+	top: calc(50% - 30px);
+	width: 60px;
+	height: 60px;
+	display: block;
+	cursor: pointer;
+	background: url(../images/opinion-right.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.opinion-main .hd .next {
+	position: absolute;
+	left: 0;
+	top: calc(50% - 30px);
+	width: 60px;
+	height: 60px;
+	display: block;
+	cursor: pointer;
+	background: url(../images/opinion-left.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.opinion-main .bd {
+	width: 1000px;
+	margin: 0 auto;
+	display: block;
+}
+
+.opinion-main .bd ul {
+	overflow: hidden;
+	zoom: 1;
+}
+
+.opinion-main .bd ul li {
+	margin: 0 8px;
+	float: left;
+	_display: inline;
+	overflow: hidden;
+	text-align: center;
+}
+
+.opinion-main .bd ul li img {
+	width: 320px;
+	display: block;
+}
+
+/* 家长好评如潮 结束 */
+/* 简单2步，开启元嘟嘟免费VIP体验 开始 */
+.free {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.free .free-top .free-top-title {
+	background-color: #FFD617;
+	width: 650px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.free .free-top .free-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.free .free-top .free-top-title p img {
+	width: 80%;
+	position: relative;
+	top: 3px;
+}
+
+/* 标题 结束 */
+/* 主要内容  */
+.free .free-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+}
+
+.free .free-main .freeitem {
+	flex: 1;
+	text-align: left;
+	padding: 20px 30px 20px 30px;
+}
+
+/* left */
+.free .free-main .left {
+	margin-right: 20px;
+	background: url(../images/freebg1.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+/* right */
+.free .free-main .right {
+	margin-left: 20px;
+	background: url(../images/freebg2.png) no-repeat center;
+	background-size: 100% 100%;
+}
+
+.free .free-main .freeitem h2 {
+	color: #F87946;
+	font-size: 22px;
+	margin: 20px auto;
+}
+
+.free .free-main .freeitem ul {
+	border-left: 2px dashed #F8D790;
+	margin-left: 15px;
+}
+
+.free .free-main .freeitem ul li {
+	/* padding-left: 20px; */
+	font-size: 18px;
+	line-height: 30px;
+	font-weight: 700;
+	color: #717171;
+	position: relative;
+	left: -15px;
+	padding: 5px 0px;
+}
+
+.free .free-main .freeitem ul li::before {
+	box-sizing: border-box;
+	margin-right: 10px;
+	content: "";
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url(../images/free.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+	top: 5px;
+}
+
+.free .free-main .freeitem p {
+	color: #A6A5A5;
+	padding: 10px 100px 20px 40px;
+	letter-spacing: 1px;
+	font-size: 14px;
+	line-height: 25px;
+}
+
+/* 简单2步，开启元嘟嘟免费VIP体验 结束 */
+/* 线上一对一 就选元嘟嘟 开始 */
+.choicebg {
+	padding: 30px 0;
+	background-color: #FFFCF1;
+}
+
+.choice {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.choice .choice-top .choice-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.choice .choice-top .choice-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.choice .choice-top .choice-top-title p img {
+	width: 80%;
+	position: relative;
+	top: 3px;
+}
+
+/* 标题 结束 */
+/* 主要内容  */
+.choice .choice-main {
+	margin: 30px auto;
+	width: 100%;
+	height: 750px;
+	background: url(../images/choicebg.png) no-repeat center;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.choice .choice-main ul li {
+	border: 2px dashed #AAAAA9;
+	color: #A4A4A6;
+	font-size: 16px;
+	border-radius: 10px;
+	width: 550px;
+	overflow: hidden;
+	box-sizing: border-box;
+	line-height: 25px;
+	letter-spacing: 1px;
+	padding: 5px 10px;
+	margin: 20px auto;
+	position: absolute;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+}
+
+.choice .choice-main ul li:nth-child(1) {
+	right: 0px;
+	top: 20px;
+	-webkit-line-clamp: 4;
+}
+
+.choice .choice-main ul li:nth-child(2) {
+	right: 0px;
+	top: 160px;
+	-webkit-line-clamp: 5;
+}
+
+.choice .choice-main ul li:nth-child(3) {
+	left: 0px;
+	bottom: 180px;
+	-webkit-line-clamp: 4;
+}
+
+.choice .choice-main ul li:nth-child(4) {
+	left: 0px;
+	bottom: 50px;
+	-webkit-line-clamp: 4;
+}
+
+/* 线上一对一 就选元嘟嘟 结束 */
+/* 底部综合 开始 */
+.foot {
+	display: block;
+	position: relative;
+	margin: 30px auto;
+}
+
+.foot ul li {
+	color: #A5A7A6;
+	line-height: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+
+/* 底部综合 结束 */
+/* 一直固定在右边的快捷方式 开始 */
+.alwaysFixed {
+	z-index: 50;
+	position: fixed;
+	top: calc(50% - 35px);
+	right: 0px;
+	width: 70px;
+	padding: 15px 0px;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px #666;
+	text-align: center;
+	/* height: 172px; */
+	box-sizing: border-box;
+}
+
+.alwaysFixed ul li {
+	padding: 0px 5px;
+	position: relative;
+}
+
+.alwaysFixed ul li+li {
+	border-top: 1px solid #ddd;
+	padding-top: 10px;
+}
+
+.alwaysFixed ul li img {
+	width: 70%;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.alwaysFixed ul li p {
+	color: #6E6C6C;
+	font-size: 14px;
+	margin: 10px auto;
+}
+
+/* 电话 */
+.alwaysFixed ul li .left-tel {
+	display: none;
+	position: absolute;
+	left: -280px;
+	top: calc(50% - 23px);
+	z-index: 52;
+	font-size: 16px;
+	white-space: nowrap;
+	height: 45px;
+	line-height: 23px;
+	padding: 10px 20px;
+	color: #fff;
+	box-shadow: 2px 2px 5px rgba(50, 50, 50, .1);
+	border-radius: 5px;
+	box-sizing: border-box;
+	background: #FCCF00;
+}
+
+.alwaysFixed ul li .left-tel::after {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 15px solid #FCCF00;
+	border-bottom: 10px solid transparent;
+	position: absolute;
+	right: -15px;
+	top: 15px;
+}
+
+.alwaysFixed ul li:nth-child(2):hover .left-tel {
+	display: block;
+}
+
+/* 返回顶部的按钮 */
+.alwaysFixed .alwaysFixed-return {
+	padding-top: 0px;
+	display: none;
+}
+
+.alwaysFixed .alwaysFixed-return a>span {
+	font-size: 45px;
+	font-weight: 700;
+	display: block;
+	text-align: center;
+	margin: 0 auto;
+	color: #E0E0E0;
+}
+
+.alwaysFixed .alwaysFixed-return p {
+	margin: 0px auto;
+}
+
+/* 后期可以显示出来  开始*/
+.alwaysFixed ul li:nth-child(1) {
+	display: none;
+}
+
+.alwaysFixed ul li:nth-child(2) {
+	border-top: none;
+	padding-top: 0px;
+}
+
+/* 后期可以显示出来  结束*/
+/* 一直固定在右边的快捷方式 结束 */
+
+
+
+/**
+ *  课程体系页面 
+ course.html
+  */
+
+
+
+/* 元嘟嘟课程设计原理 开始 */
+.principle {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.principle .principle-top .principle-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.principle .principle-top .principle-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.principle .principle-top .principle-top-title p img {
+	width: 70%;
+	position: relative;
+	top: 3px;
+}
+
+/* 标题 结束 */
+/* 主要内容  */
+.principle .principle-main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.principle .principle-main .principleItem {
+	flex: 1;
+	text-align: center;
+	position: relative;
+	padding: 60px;
+}
+
+.principle .principle-main .principleItem img {
+	width: 100%;
+}
+
+.principle .principle-main .principleItem p {
+	text-align: left;
+	line-height: 35px;
+	font-size: 22px;
+	letter-spacing: 9px;
+	padding: 100px 100px 60px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	color: #fff;
+}
+
+/* 元嘟嘟课程设计原理 结束 */
+/* 元嘟嘟儿童心智发展特征 开始 */
+.mindbg {
+	background-color: #F7F7F7;
+	padding: 1px 0px;
+}
+
+.mind {
+	margin: 60px auto;
+	display: block;
+}
+
+/* 标题 开始 */
+.mind .mind-top .mind-top-title {
+	background-color: #FFD617;
+	width: 450px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.mind .mind-top .mind-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.mind .mind-top .mind-top-title p img {
+	width: 80%;
+	position: relative;
+	top: 3px;
+}
+
+/* 标题 结束 */
+/* 主要内容  */
+.mind .mind-main {
+	margin-top: 60px;
+}
+
+.mind .mind-main img {
+	width: 100%;
+}
+
+/* 元嘟嘟儿童心智发展特征 结束 */
+/* 学员作品欣赏 开始 */
+.appreciate {
+	margin: 80px auto;
+	display: block;
+	vertical-align: middle;
+}
+
+/* 标题 开始 */
+.appreciate .appreciate-top .appreciate-top-title {
+	background-color: #FFD617;
+	width: 350px;
+	height: 50px;
+	text-align: center;
+	margin: 0 auto;
+	border-radius: 50px;
+	line-height: 50px;
+}
+
+.appreciate .appreciate-top .appreciate-top-title p {
+	font-size: 35px;
+	color: #fff;
+	letter-spacing: 2px;
+	/* 字体描边 */
+	-webkit-text-stroke: 1px #B9741A;
+	text-shadow: #B9741A 11px 0 5px;
+}
+
+.appreciate .appreciate-top .appreciate-top-title p img {
+	width: 60%;
+	position: relative;
+	top: 3px;
+}
+
+.appreciate .appreciate-top .appreciate-top-main {
+	text-align: center;
+	margin: 20px auto 30px;
+}
+
+.appreciate .appreciate-top .appreciate-top-main p {
+	margin: 10px auto;
+}
+
+.appreciate .appreciate-top .appreciate-top-main p a {
+	font-size: 18px;
+	padding: 2px;
+	color: #9FA0A0;
+}
+
+/* 标题 结束 */
+/* 主要内容 开始 */
+.appreciate-main {
+	overflow: hidden;
+	position: relative;
+	margin: 0 auto;
+}
+
+.appreciate-main .hd {
+	margin: 20px auto 0px;
+}
+
+.appreciate-main .hd ul {
+	overflow: hidden;
+	zoom: 1;
+	text-align: center;
+	width: 160px;
+	margin: 0 auto;
+}
+
+.appreciate-main .hd ul li {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 20px;
+	text-indent: -999px;
+	cursor: pointer;
+	background-color: #DCDDDD;
+	border-radius: 50%;
+}
+
+.appreciate-main .hd ul li.on {
+	background-color: #FCCF00;
+}
+
+
+.appreciate-main .bd {
+	padding: 10px;
+	overflow: hidden;
+}
+
+.appreciate .bd .ulWrap {
+	width: 100%;
+}
+
+.appreciate-main .bd ul {
+	overflow: hidden;
+	zoom: 1;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	margin: 0 auto;
+}
+
+.appreciate-main .bd ul li {
+	flex: 0 1 33.33%;
+	display: inline;
+	overflow: hidden;
+	text-align: center;
+}
+
+.appreciate-main .bd ul li .pic {
+	background: url(../images/ClassScene-mainbg.png) no-repeat center;
+	background-size: 100% 100%;
+
+}
+
+.appreciate-main .bd ul li .pic img {
+	display: block;
+	padding: 2px;
+	text-align: center;
+	margin: 0 auto;
+	width: 373px;
+	height: 248px;
+	box-sizing: border-box;
+	padding: 31px;
+}
+
+.appreciate-main .bd ul li .title {
+	margin: 10px auto;
+	display: block;
+	text-align: left;
+	text-indent: 1em;
+	width: 80%;
+	height: 30px;
+	line-height: 30px;
+	padding: 0px;
+	border-radius: 20px;
+	background-color: #FFD748;
+}
+
+.appreciate-main .bd ul li .title a {
+	font-size: 16px;
+	color: #fff;
+}
+
+.appreciate-main .bd ul li .title a span:nth-child(2) {
+	float: right;
+	display: inline-block;
+	margin-right: 10px;
+	position: relative;
+	top: 1px;
+
+}
+
+/* 学员作品欣赏 结束 */
+
+/**
+ *  课程体系页面 
+ teachers.html
+  */
+
+/* 教学实景照片 开始 */
+.reality {
+	margin: 0px auto 60px;
+	display: block;
+}
+
+.reality ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.reality ul li {
+	flex: 0 1 25%;
+}
+
+.reality ul li img {
+	width: 100%;
+}
+
+/* 教学实景照片 结束 */
+
+
+/**
+ *  课程体系页面 
+ login.html
+  */
+
+/* 主要的内容开始 */
+.LoginMainbg {
+	height: calc(100% - 50px);
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	display: block;
+	background: url(../images/loginbg.png) no-repeat center;
+	background-size: 100% 100%;
+	overflow: hidden;
+}
+
+.LoginMain {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.LoginMain .LoginMain-item {
+	flex: 1;
+	text-align: center;
+}
+
+.LoginMain .LoginMain-item.left img {
+	width: 90%;
+}
+
+/* 注册开始 */
+.LoginMain .right .register {
+	width: 380px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 30px 50px;
+	border-radius: 15px;
+	text-align: left;
+}
+
+.LoginMain .right .register h2 {
+	color: #595757;
+	font-size: 20px;
+	margin: 20px auto;
+	letter-spacing: 2px;
+	font-weight: normal;
+}
+
+.LoginMain .right .register>p {
+	color: #6E6C6C;
+	font-size: 14px;
+	margin: 10px auto;
+	letter-spacing: 2px;
+	cursor: pointer;
+}
+
+.LoginMain .right .register>p span {
+	color: #F5A520;
+}
+
+.LoginMain .right .register ul li {
+	border-bottom: 2px solid #EAEBEB;
+	padding-bottom: 0;
+	position: relative;
+	width: 100%;
+	vertical-align: middle;
+	margin: 10px auto;
+}
+
+
+.LoginMain .right .register ul li img {
+	width: 20px;
+	display: inline-block;
+	margin-right: 5px;
+	position: relative;
+	top: 3px;
+}
+
+.LoginMain .right .register ul li input {
+	display: inline-block;
+	line-height: 25px;
+	font-size: 14px;
+	width: 205px;
+	box-sizing: border-box;
+	text-indent: 0.2em;
+	border: none;
+}
+
+.LoginMain .right .register ul li:nth-child(1) input {
+	text-indent: 3.5em;
+}
+
+.LoginMain .right .register ul li span {
+	position: absolute;
+	display: inline-block;
+	line-height: 25px;
+	padding: 3px;
+	font-size: 16px;
+	color: #898989;
+}
+
+.LoginMain .right .register ul li:nth-child(2) input {
+	width: 135px;
+}
+
+.LoginMain .right .register ul li:nth-child(2) p {
+	display: inline-block;
+	width: 100px;
+	box-sizing: border-box;
+	margin: 0px 0px 0px 10px;
+	color: #fff;
+	border-radius: 10px;
+	line-height: 25px;
+	padding: 1px 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.LoginMain .right .register ul li:nth-child(2) p img {
+	width: 80%;
+}
+
+.LoginMain .right .register ul li:nth-child(3) input {
+	width: 105px;
+}
+
+.LoginMain .right .register ul li:nth-child(3) button {
+	display: inline-block;
+	width: 130px;
+	box-sizing: border-box;
+	margin: 0px 0px 0px 10px;
+	background-color: #FDD500;
+	color: #fff;
+	border-radius: 10px;
+	line-height: 25px;
+	padding: 3px 5px;
+	text-align: center;
+	border: none;
+}
+
+.LoginMain .right .register ul li:nth-child(3) img {
+	top: 5px;
+}
+
+/* 使用条款 */
+.LoginMain .right .register .register-bottom {}
+
+.LoginMain .right .register .register-bottom .register_error {
+	visibility: visible;
+	margin: 10px auto;
+	text-align: center;
+	font-size: 14px;
+	color: #f00;
+}
+
+.LoginMain .right .register .register-bottom p {
+	color: #6E6C6C;
+	font-size: 12px;
+}
+
+.LoginMain .right .register .register-bottom p input {}
+
+.LoginMain .right .register .register-bottom p label span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	vertical-align: middle;
+	background-color: #fff;
+	margin-right: 5px;
+	position: relative;
+	top: -2px;
+	border: 1px solid #F39800;
+}
+
+.LoginMain .right .register .register-bottom p label :checked+span {
+	background-color: #F39800;
+}
+
+.LoginMain .right .register .register-bottom p label input[type=radio] {
+	display: none;
+}
+
+.LoginMain .right .register .register-bottom p a {
+	color: #F39800;
+}
+
+.LoginMain .right .register .register-bottom>input {
+	background-color: #FF9700;
+	width: 80%;
+	height: 35px;
+	border-radius: 15px;
+	line-height: 35px;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	margin: 20px auto;
+	text-align: center;
+	display: block;
+}
+
+/* 注册结束 */
+/* 登录开始 */
+.LoginMain .right .login {
+	width: 380px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 10px 20px;
+	border-radius: 15px;
+	text-align: center;
+	display: none;
+}
+
+.LoginMain .right .login img {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.LoginMain .right .login img:first-child {
+	width: 90%;
+}
+
+.LoginMain .right .login img:nth-child(2) {
+	width: 60%;
+}
+
+.LoginMain .right .login img:last-child {
+	width: 60%;
+}
+
+.LoginMain .right .login p {
+	color: #9FA0A0;
+	font-size: 14px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* 登录结束 */
+/* 主要的内容结束 */
